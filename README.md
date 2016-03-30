@@ -11,7 +11,8 @@
 
 4. 连接mysql数据库
 进入项目文档，新建mysql.js示例，编写如下代码:
-<pre>
+
+```bash
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -29,8 +30,9 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 });
 
 connection.end();
-</pre>
 
+
+```
 连接基本参数
 host 主机名，localhost代表本地
 user Mysql用户
