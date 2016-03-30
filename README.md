@@ -62,6 +62,7 @@ connection.query("select * from student" , function selectTable(err, rows, field
  }
 });
   </pre>
+  ---
 #####二、vue.js与SUI 结合
 
 > [sui](http://m.sui.taobao.org/)
