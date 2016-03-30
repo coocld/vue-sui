@@ -11,6 +11,7 @@
 
 4. 连接mysql数据库
 进入项目文档，新建mysql.js示例，编写如下代码:
+<pre>
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -28,6 +29,7 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 });
 
 connection.end();
+</pre>
 
 连接基本参数
 host 主机名，localhost代表本地
@@ -40,17 +42,17 @@ client.end()关闭连接。
 然后通过node mysql.js执行程序，确保你在执行之前已经启动了Mysql服务。
 
 5. 增删改查
-
-// 增加记录
+```bash
+#增加记录
 connection.query('insert into student (name ,sex ,age) values ("天天" , "难" ,"23")');
  
-// 删除记录
+#删除记录
 connection.query('delete from student where name = "共和国"');
  
-// 修改记录
+#修改记录
 connection.query('update student set name = "李四" where name = "lupeng"');
  
-// 查询记录
+#查询记录
 connection.query("select * from student" , function selectTable(err, rows, fields){
  if (err){
   throw err;
@@ -62,6 +64,7 @@ connection.query("select * from student" , function selectTable(err, rows, field
  }
 });
 
+```
 二、vue.js与SUI 结合
 
 > [sui](http://m.sui.taobao.org/)
