@@ -1,15 +1,19 @@
 一、nodeJs连接数据库，并实现（CURD）增、删、改、查
 
 1. 安装mysql
+
 下载MySQL :MySQL，设置root密码以及创建普通用户以及密码。我安装的是wampserver
 
 2. 安装Node-mysql
+
 进入项目文件夹，执行npm install mysql 。
 
 3. 查看readme文档
+
 进入mysql目录中，查看README文档
 
 4. 连接mysql数据库
+
 进入项目文档，新建mysql.js示例，编写如下代码:
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
@@ -30,6 +34,7 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 connection.end();
 
 连接基本参数
+
 host 主机名，localhost代表本地
 user Mysql用户
 password 密码
@@ -40,6 +45,7 @@ client.end()关闭连接。
 然后通过node mysql.js执行程序，确保你在执行之前已经启动了Mysql服务。
 
 5. 增删改查
+
 <pre>
 // 增加记录
 connection.query('insert into student (name ,sex ,age) values ("天天" , "难" ,"23")');
@@ -62,6 +68,7 @@ connection.query("select * from student" , function selectTable(err, rows, field
  }
 });
   </pre>
+  
 二、vue.js与SUI 结合
 
 > [sui](http://m.sui.taobao.org/)
